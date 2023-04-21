@@ -6,3 +6,18 @@
     1 2 3 4 5
     6
     -> 5"""
+
+n=int(input("Количество элементов в массиве: ")) 
+if n>0:
+    a=[]
+    for i in range (n):
+        a.append(int(input("Введите элемент массива: ")))
+    x=int(input("Число Х: "))
+    dif=abs(x-a[0])
+    mem=0
+    for i in range (1,len(a)):
+        if abs(x-a[i])<dif: 
+            dif=abs(x-a[i])
+            mem=i
+    print("Самое близкий по величине к ", x, " элемент в массиве = ", a[mem]) 
+else: print("Количество элементов в массиве должно быть положительным ")
